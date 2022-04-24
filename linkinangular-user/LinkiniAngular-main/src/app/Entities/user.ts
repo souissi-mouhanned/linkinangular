@@ -6,7 +6,7 @@ export class User {
    email : String ;
    username : String ;
    password : String ;
-   role : Role  ;
+   roles : Role  ;
    profession : String ;
    domain : String ;
    likebudge :  number ;

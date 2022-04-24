@@ -18,6 +18,8 @@ listuser : any ;
 role !: Role;
 user ! : User;
 CloseResult ! : String;
+user_roles: any ;
+
   constructor
   (
     private userservice : UserService,
@@ -25,15 +27,19 @@ CloseResult ! : String;
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router) { }
-
+    selectedRoles: string[] = [];
   ngOnInit(): void {
+    this.user_roles =[
+      {Id_Role:'1', role:'ROLE_Employee',selected: false},
+      {Id_Role:'2', role:'ROLE_Company',selected: false},
+    ];
     this.user={
       id_user : null,
       name : null,
       email : null,
       username : null,
       password : null,
-      role :null  ,
+      roles :this.user_roles  ,
       profession : null,
       domain : null,
       likebudge : null,
@@ -67,5 +73,9 @@ private getDismissReason(reason: any): string {
   } else {
     return  `with: ${reason}`;
   }
+}
+
+onChangeCategory(event: any, roles: any) {
+  this.selectedRoles.push(roles.role);
 }
 }
