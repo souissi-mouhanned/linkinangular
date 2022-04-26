@@ -24,23 +24,26 @@
         </div>
         <div class="row" class="col-md-6">
 
-            <!-- <div >
+            <div >
                 <input [(ngModel)]="user.roles.role" [ngModelOptions]="{standalone: true}" name="{{ role.role }}" type="checkbox" id="{{role.role}}"
                 (change)="onChangeCategory($event, role)" >
                 <label class="form-check-label" for="{{role.role}}">
                     {{role.role}}
-                </label>
+                </label>ROLE_Company
+                <br>
                 <input [(ngModel)]="user.roles.role" [ngModelOptions]="{standalone: true}" name="{{ role.role }}" type="checkbox" id="{{role.role}}"
                 (change)="onChangeCategory($event, role)" >
                 <label class="form-check-label" for="{{role.role}}">
                     {{role.role}}
-                </label>
-            </div> -->
-            <input type="text" placeholder="user rolee" [(ngModel)]="user.roles.role" [ngModelOptions]="{standalone : true}">
+                </label>ROLE_Employee
+            </div>
+           
+            <!-- <input type="text" placeholder="user rolee" [(ngModel)]="user.roles.role"
+                [ngModelOptions]="{standalone : true}"> -->
 
         </div>
         <br>
-        <button type="button" class="btn btn-success" (click)="adduser(user)">Add</button>
+        <button type="button" class="btn btn-success" (click)="adduser(user)" routerLink="/singin">Add</button>
         <button type="button" class="btn btn-info">Cancel</button>
     </form>
 </div>

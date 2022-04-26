@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Invitation } from '../Entities/invitation';
+import { AuthServiceService } from '../Services/auth-service.service';
 import { InvitationServiceService } from '../Services/invitation-service.service';
 
 @Component({
@@ -13,7 +14,7 @@ ListInvitation : any ;
 form : boolean ;
 invitation ! : Invitation ;
 CloseResult !: String ;
-  constructor(private invitatIonservice : InvitationServiceService , private modalService : NgbModal) { }
+  constructor(public authService: AuthServiceService ,private invitatIonservice : InvitationServiceService , private modalService : NgbModal) { }
 
   ngOnInit(): void {
     this.getAllInvitation();

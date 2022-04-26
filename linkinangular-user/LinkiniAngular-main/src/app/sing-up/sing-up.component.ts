@@ -60,7 +60,7 @@ user_roles: any ;
   //     .subscribe(() => this.router.navigate(['/singin']));
   // }
 adduser(u : any):void {
-  this.userservice.adduser(u).subscribe(() => this.router.navigate(['/singin']))
+  this.userservice.adduser(u).subscribe()
 }
 cancel(){
   this.form = false;

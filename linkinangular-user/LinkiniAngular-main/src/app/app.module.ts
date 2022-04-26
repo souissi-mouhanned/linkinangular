@@ -12,6 +12,9 @@ import { SingInComponent } from './sing-in/sing-in.component';
 import { SingUpComponent } from './sing-up/sing-up.component';
 import { NavComponent } from './nav/nav.component';
 import { InvitationComponent } from './invitation/invitation.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BannerNavigationComponent } from './apps/shared/banner-navigation/banner-navigation.component';
+import { InvitationfilsComponent } from './invitationfils/invitationfils.component';
 
 
 
@@ -25,6 +28,8 @@ import { InvitationComponent } from './invitation/invitation.component';
     SingUpComponent,
     NavComponent,
     InvitationComponent,
+    ProfileComponent,
+    InvitationfilsComponent,
   ],
   imports: [
     BrowserModule,
